@@ -32,7 +32,19 @@ function readLine(): string {
 
 function gradingStudents(grades: number[]): number[] {
     // Write your code here
+    let processedGrades: Array<number> = [];
+    for(let i = 0; i < grades.length; i++) {
+        processedGrades.push(roundNumber(grades[i]));
+    }
+    return processedGrades;
+}
 
+function roundNumber(grade: number): number {
+    let difference = 5 - (grade % 5);
+    if(grade >= 38 && difference < 3 ) {
+        return grade + difference;
+    }
+    return grade
 }
 
 function main() {
