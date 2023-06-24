@@ -36,7 +36,16 @@ function readLine(): string {
 
 function countApplesAndOranges(s: number, t: number, a: number, b: number, apples: number[], oranges: number[]): void {
     // Write your code here
-
+    apples = apples.filter(apple => 
+        a + apple >= s && 
+        a + apple <= t
+    );
+    oranges = oranges.filter(orange => 
+        b + orange >= s && 
+        b + orange <= t
+    );
+    console.log(apples.length);
+    console.log(oranges.length);
 }
 
 function main() {
