@@ -36,6 +36,21 @@ function readLine(): string {
 
 function kangaroo(x1: number, v1: number, x2: number, v2: number): string {
   // Write your code here
+  if (v2 > v1) {
+    return "NO";
+  }
+  /* 
+  x1 - x2 = t * (v2 - v1)
+  Kangaroos have a shared position if : 
+  x1 - x2 / (v2 - v1) >= 0 // x1 is behind but faster
+  x1 - x2 % (v2 - v1) === 0 // distance is common multiple of speedDiff so they can meet.
+  */
+  const startingPosDiff = x1 - x2;
+  const speedDiff = v2 - v1;
+  if (startingPosDiff % speedDiff === 0 && startingPosDiff / speedDiff >= 0) {
+    return "YES";
+  }
+  return "NO";
 }
 
 function main() {
