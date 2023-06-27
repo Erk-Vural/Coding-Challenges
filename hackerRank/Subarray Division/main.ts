@@ -35,6 +35,17 @@ function readLine(): string {
 
 function birthday(s: number[], d: number, m: number): number {
   // Write your code here
+  let result = 0;
+  for (let i = 0; i < s.length; i++) {
+    let segmentSum = s[i];
+    for (let j = 1; j < m; j++) {
+      segmentSum += s[i + j];
+    }
+    if (segmentSum === d) {
+      result++;
+    }
+  }
+  return result;
 }
 
 function main() {
