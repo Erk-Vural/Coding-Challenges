@@ -32,6 +32,20 @@ function readLine(): string {
 
 function breakingRecords(scores: number[]): number[] {
   // Write your code here
+  let records = [scores[0], scores[0]];
+  let minRecBreakCount = 0;
+  let maxRecBreakCount = 0;
+
+  for (let i = 1; i < scores.length; i++) {
+    if (scores[i] < records[0]) {
+      records[0] = scores[i];
+      minRecBreakCount++;
+    } else if (scores[i] > records[1]) {
+      records[1] = scores[i];
+      maxRecBreakCount++;
+    }
+  }
+  return [minRecBreakCount, maxRecBreakCount];
 }
 
 function main() {
