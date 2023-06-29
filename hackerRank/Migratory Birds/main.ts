@@ -55,10 +55,7 @@ function getTypesWithCounts(arr: number[]) {
   return { results: results, max: max };
 }
 
-function getTypeWithMinId(resultObject: {
-  results: number[][];
-  max: number;
-}): number {
+function getTypeWithMinId(resultObject): number {
   let typesWithMaxCounts = resultObject.results.filter(
     (typeWithCount) => typeWithCount[1] === resultObject.max
   );
