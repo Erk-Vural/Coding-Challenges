@@ -45,6 +45,7 @@ function divisibleSumPairs(n: number, k: number, ar: number[]): number {
   }
   return result;
 }
+
 function main() {
   const ws: WriteStream = createWriteStream(process.env["OUTPUT_PATH"]);
 
