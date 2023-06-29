@@ -32,6 +32,44 @@ function readLine(): string {
 
 function migratoryBirds(arr: number[]): number {
   // Write your code here
+  let resultObject = getTypesWithCounts(arr);
+  return getTypeWithMinId(resultObject);
+}
+
+function getTypesWithCounts(arr: number[]) {
+  let results = [];
+  let max = 0;
+  let uniqueArr = new Set(arr);
+  for (let uniqNum of uniqueArr) {
+    let counter = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (uniqNum === arr[j]) {
+        counter++;
+      }
+    }
+    if (counter > max) {
+      max = counter;
+    }
+    results.push([uniqNum, counter]);
+  }
+  return { results: results, max: max };
+}
+
+function getTypeWithMinId(resultObject: {
+  results: number[][];
+  max: number;
+}): number {
+  let typesWithMaxCounts = resultObject.results.filter(
+    (typeWithCount) => typeWithCount[1] === resultObject.max
+  );
+
+  let minId = 5;
+  for (let typeWithMaxCount of typesWithMaxCounts) {
+    if (typeWithMaxCount[0] <= minId) {
+      minId = typeWithMaxCount[0];
+    }
+  }
+  return minId;
 }
 
 function main() {
