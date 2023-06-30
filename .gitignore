@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+js-ts-example/app.js
+js-ts-example/main.ts
+js-ts-example/tsconfig.json
