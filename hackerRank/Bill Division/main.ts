@@ -33,8 +33,16 @@ function readLine(): string {
 
 function bonAppetit(bill: number[], k: number, b: number): void {
   // Write your code here
-}
+  let sum = 0;
+  bill.forEach((item) => (sum += item));
 
+  let annasShare = (sum - bill[k]) / 2;
+  if (b === annasShare) {
+    console.log("Bon Appetit");
+  } else {
+    console.log(b - annasShare);
+  }
+}
 function main() {
   const firstMultipleInput: string[] = readLine()
     .replace(/\s+$/g, "")
