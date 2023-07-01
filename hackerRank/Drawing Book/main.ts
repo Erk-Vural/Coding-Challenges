@@ -34,6 +34,9 @@ function readLine(): string {
 
 function pageCount(n: number, p: number): number {
   // Write your code here
+  const totalTurnsFromFront = Math.floor(p / 2);
+  const totalTurnsFromBack = Math.floor(n / 2) - totalTurnsFromFront;
+  return Math.min(totalTurnsFromFront, totalTurnsFromBack);
 }
 
 function main() {
