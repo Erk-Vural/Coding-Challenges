@@ -34,6 +34,20 @@ function readLine(): string {
 
 function sockMerchant(n: number, ar: number[]): number {
   // Write your code here
+  let pairCount = 0;
+  let sockSet: Set<number> = new Set(ar);
+
+  for (let sock of sockSet) {
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+      if (sock === ar[i]) {
+        count++;
+      }
+    }
+    console.log(count);
+    pairCount += Math.floor(count / 2);
+  }
+  return pairCount;
 }
 
 function main() {
