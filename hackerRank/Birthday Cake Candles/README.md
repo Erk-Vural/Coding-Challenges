@@ -26,7 +26,7 @@ The second line contains space-separated integers, where each integer describes 
 
 ### Constraints
 
-![img.png](img.png)
+![img.png](images/img.png)
 
 ### Sample Input 0
 
