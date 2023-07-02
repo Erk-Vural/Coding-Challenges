@@ -32,6 +32,19 @@ function getMoneySpent(keyboards, drives, b) {
   /*
    * Write your code here.
    */
+  let max = 0;
+  for (let i = 0; i < keyboards.length; i++) {
+    for (let j = 0; j < drives.length; j++) {
+      let total = keyboards[i] + drives[j];
+      if (total > max && total <= b) {
+        max = total;
+      }
+    }
+  }
+  if (max === 0) {
+    return -1;
+  }
+  return max;
 }
 
 function main() {
