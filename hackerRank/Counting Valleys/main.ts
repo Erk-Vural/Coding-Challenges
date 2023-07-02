@@ -34,6 +34,22 @@ function readLine(): string {
 
 function countingValleys(steps: number, path: string): number {
   // Write your code here
+  let pos = 0;
+  let valleyCount = 0;
+
+  for (let i = 0; i < steps; i++) {
+    let lastPos = pos;
+    if (path[i] === "U") {
+      pos++;
+    } else {
+      pos--;
+    }
+
+    if (pos === 0 && lastPos < 0) {
+      valleyCount++;
+    }
+  }
+  return valleyCount;
 }
 
 function main() {
