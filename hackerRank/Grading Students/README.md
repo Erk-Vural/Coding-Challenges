@@ -1,3 +1,5 @@
+# Grading Students
+
 HackerLand University has the following grading policy:
 
 Every student receives a grade in the inclusive range from to 0 to 100.
@@ -9,7 +11,7 @@ Sam is a professor at the university and likes to round each student's grade acc
 
 - If the value of grade is less than 38, no rounding occurs as the result will still be a failing grade.
 
-<h3>Examples</h3>
+### Examples
 
 - grade = 84 round to 85(85 - 84 is less than 3)
 - grade = 29 do not round (result is less than 40)
@@ -17,7 +19,7 @@ Sam is a professor at the university and likes to round each student's grade acc
 
 Given the initial value of grade for each of Sam's n students, write code to automate the rounding process.
 
-<h3>Function Description</h3>
+### Function Description
 
 Complete the function gradingStudents in the editor below.
 
@@ -25,21 +27,21 @@ gradingStudents has the following parameter(s):
 
 - int grades[n]: the grades before rounding
 
-<h3>Returns</h3>
+### Returns
 
 - int[n]: the grades after rounding as appropriate
 
-<h3>Input Format</h3>
+### Input Format
 
 The first line contains a single integer, n, the number of students.
 Each line of i the n subsequent lines contains a single integer, grades[i].
 
-<h3>Constraints</h3>
+### Constraints
 
 - 1 <= n <= 60
 - 0 <= grades[i] <= 100
 
-<h3>Sample Input 0</h3>
+### Sample Input 0
 
     4
     73
@@ -47,18 +49,18 @@ Each line of i the n subsequent lines contains a single integer, grades[i].
     38
     33
 
-<h3>Sample Output 0</h3>
+### Sample Output 0
 
     75
     67
     40
     33
 
-<h3>Explanation 0</h3>
+### Explanation 0
 
-![Alt text](explanation0.png)
+![Alt text](images/explanation0.png)
 
-1-  Student 1 received a 73, and the next multiple of 5 from is 73 is 75. Since 75 - 73 < 3, the student's grade is rounded to 75.
+1- Student 1 received a 73, and the next multiple of 5 from is 73 is 75. Since 75 - 73 < 3, the student's grade is rounded to 75.
 
 2- Student 2 received a 67, and the next multiple of 5 from 67 is 70. Since 70 - 67 = 3, the grade will not be modified and the student's final grade is 67.
 

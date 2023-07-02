@@ -1,6 +1,8 @@
+# Divisible Sum Pairs
+
 ![Alt text](images/image.png)
 
-<h3>Function Description</h3>
+### Function Description
 
 Complete the divisibleSumPairs function in the editor below.
 
@@ -10,25 +12,25 @@ divisibleSumPairs has the following parameter(s):
 - int ar[n]: an array of integers
 - int k: the integer divisor
 
-<h3>Returns</h3>
+### Returns
 
 - int: the number of pairs
 
-<h3>Input Format</h3>
+### Input Format
 
 The first line contains 2 space-separated integers, n and k.
 The second line contains n space-separated integers, each a value of arr[i].
 
 ![](images/image-1.png)
 
-<h3>Sample Input</h3>
+### Sample Input
 
     STDIN           Function
     -----           --------
     6 3             n = 6, k = 3
     1 3 2 6 1 2     ar = [1, 3, 2, 6, 1, 2]
 
-<h3>Sample Output</h3>
+### Sample Output
 
     5
 
