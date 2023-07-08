@@ -26,7 +26,18 @@ function readLine() {
 }
 
 // Complete the catAndMouse function below.
-function catAndMouse(x, y, z) {}
+function catAndMouse(x, y, z) {
+  const distA = Math.abs(x - z);
+  const distB = Math.abs(y - z);
+
+  if (distA === distB) {
+    return "Mouse C";
+  } else if (distA > distB) {
+    return "Cat B";
+  } else {
+    return "Cat A";
+  }
+}
 
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
