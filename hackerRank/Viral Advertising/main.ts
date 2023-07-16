@@ -15,7 +15,6 @@ process.stdin.on("data", function (inputStdin: string): void {
 process.stdin.on("end", function (): void {
   inputLines = inputString.split("\n");
   inputString = "";
-  Viral Advertising
   main();
 });
 
@@ -32,6 +31,16 @@ function readLine(): string {
 
 function viralAdvertising(n: number): number {
   // Write your code here
+  let cumulativeSum = 0;
+
+  let shared = 5;
+  for (let i = 0; i < n; i++) {
+    const liked = Math.floor(shared / 2);
+    shared = liked * 3;
+    cumulativeSum += liked;
+  }
+
+  return cumulativeSum;
 }
 
 function main() {
