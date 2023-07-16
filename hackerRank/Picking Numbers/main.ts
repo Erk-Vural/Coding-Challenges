@@ -31,7 +31,24 @@ function readLine(): string {
  */
 
 function pickingNumbers(a: number[]): number {
-  // Write your code here
+  // Sort the array in ascending order
+  a.sort((x, y) => x - y);
+
+  let result = 0;
+  let currLength = 0;
+  let currNumber = a[0];
+
+  for (let i = 0; i < a.length; i++) {
+    if (Math.abs(a[i] - currNumber) <= 1) {
+      currLength++;
+    } else {
+      currNumber = a[i];
+      currLength = 1;
+    }
+    result = Math.max(result, currLength);
+  }
+
+  return result;
 }
 
 function main() {
